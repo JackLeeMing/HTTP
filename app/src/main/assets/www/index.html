@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script  type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+<div id='my-graph'></div>
+<h1>哈哈</h1>
+<h2>马拉个军</h2>
+<h>{{data.name}}</h>
+</body>
+<script type="text/javascript" >
+
+    var arr_x = [];
+    var arr_y = [];
+    for( var i=0; i<10; i++){
+        arr_x.push(i);
+        arr_y.push(Math.random());
+    }
+
+    var trace1 = {
+        x: arr_x,
+        y: arr_y,
+        type: 'scatter'
+    };
+
+
+
+    var data = [trace1];
+    var layout = {
+        margin:{
+            b:0,
+            l:0,
+            t:0,
+            r:0
+        },
+        showlegend:false
+    };
+    Plotly.plot('my-graph', data, layout,{displayModeBar: false});
+</script>
+</html>
